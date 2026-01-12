@@ -28,7 +28,7 @@ function randomizbackground() {
     backgroundInterval = setInterval(() => {
       let random = Math.floor(Math.random() * imglist.length);
       landingPage.style.backgroundImage = `url(../imgs/${imglist[random]})`;
-    }, 1000);
+    }, 5000);
   }
 }
 let backgroundBtns = document.querySelectorAll(".background-option span");
