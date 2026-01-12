@@ -20,14 +20,22 @@ document.addEventListener("click", (e) => {
 
 // randomizbackground
 let landingPage = document.querySelector(".landing-page");
-let imglist = ["land1.jpg", "land2.jpg", "land3.jpg", "land4.webp","land5.jpg","land6.jpg"];
+let imglist = [
+  "land1.jpg",
+  "land2.jpg",
+  "land3.jpg",
+  "land4.webp",
+  "land5.jpg",
+  "land6.jpg",
+];
 let backgroundOption = true;
 let backgroundInterval;
 function randomizbackground() {
   if (backgroundOption === true) {
     backgroundInterval = setInterval(() => {
       let random = Math.floor(Math.random() * imglist.length);
-      landingPage.style.backgroundImage = `url(../imgs/${imglist[random]})`;
+      landingPage.style.backgroundImage = `url(/imgs/${imglist[random]})`;
+      console.log(imglist[random]);
     }, 5000);
   }
 }
@@ -230,7 +238,6 @@ menuBtn.onclick = function () {
 document.body.addEventListener("click", (e) => {
   if (e.target !== menuBtn && e.target !== mobilemenu) {
     mobilemenu.classList.remove("open-menu");
-    menuBtn.classList.remove("active")
-  
+    menuBtn.classList.remove("active");
   }
 });
